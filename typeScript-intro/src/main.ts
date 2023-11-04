@@ -3,6 +3,9 @@ import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 
+import { name, age, isValid, templateString } from './bases/01-types.ts'
+import { balbaseur, pokemonsId } from './bases/02-objects.ts'
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -16,9 +19,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <button id="counter" type="button"></button>
     </div>
     <p class="read-the-docs">
-      PROBANDO LA APLICACION 
+       PROBANDO LA APLICACION 
       </br>
+      <h1> ${ name } </h1>
+      <h2> mi edad es: ${ age } </h2>
+      <h3> En serio? ${isValid} </h3>
       Click on the Vite and TypeScript logos to learn more
+      <p>${templateString}</p>
+      <p>${pokemonsId}</p>
+      <p>${balbaseur.name}</p>
     </p>
   </div>
 `
